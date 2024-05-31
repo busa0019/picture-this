@@ -27,7 +27,10 @@
         images/museum-square-1600.jpg 1600w,
         images/museum-square-1920.jpg 1920w,
         images/museum-square-2400.jpg 2400w"
+        sizes="(min-width: 960px) 50vw, 100vw"
         media="(min-width: 960px)">
+      <!-- Added sizes attribute to specify the image's layout size. The validator was showing an error without this attribute, so i added it. -->
+
      <!-- Landscape images for viewports smaller than 960px -->
       <source  srcset="
         images/museum-landscape-320.jpg 320w,
@@ -39,7 +42,9 @@
         images/museum-landscape-1920.jpg 1920w,
         images/museum-landscape-2160.jpg 2160w,
         images/museum-landscape-2880.jpg 2880w"
+        sizes="(max-width: 959px) 100vw, 50vw"
         media="(max-width: 959px)">
+        <!-- Added sizes attribute to specify the image's layout size. The validator was showing an error without this attribute, so i added it. -->
       <img src="images/museum.jpg" alt="Image of a Museum">
     </picture>
 
