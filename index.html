@@ -16,7 +16,8 @@
       <h4>My Really Cool Blog Post</h4>
     </div>
     <picture>
-      <source media="(min-width: 960px)" srcset="
+     <!-- Square images for viewports 960px or larger -->
+      <source  srcset="
         images/museum-square-480.jpg 480w,
         images/museum-square-640.jpg 640w,
         images/museum-square-800.jpg 800w,
@@ -25,8 +26,10 @@
         images/museum-square-1440.jpg 1440w,
         images/museum-square-1600.jpg 1600w,
         images/museum-square-1920.jpg 1920w,
-        images/museum-square-2400.jpg 2400w">
-      <source media="(max-width: 959px)" srcset="
+        images/museum-square-2400.jpg 2400w"
+        media="(min-width: 960px)">
+     <!-- Landscape images for viewports smaller than 960px -->
+      <source  srcset="
         images/museum-landscape-320.jpg 320w,
         images/museum-landscape-480.jpg 480w,
         images/museum-landscape-640.jpg 640w,
@@ -35,11 +38,20 @@
         images/museum-landscape-1440.jpg 1440w,
         images/museum-landscape-1920.jpg 1920w,
         images/museum-landscape-2160.jpg 2160w,
-        images/museum-landscape-2880.jpg 2880w">
-      <img src="images/museum.jpg" alt="Museum">
+        images/museum-landscape-2880.jpg 2880w"
+        media="(max-width: 959px)">
+      <img src="images/museum.jpg" alt="Image of a Museum">
     </picture>
 
   </header>
 </body>
 
 </html>
+
+<!-- 
+      Things to do 
+- Implement responsive images with srcset for optimized loading
+- Added multiple image sizes for various viewport widths and DPRs
+- Verified image loading in Network tab for different DPR settings
+- Add alt attributes for all images
+-->
